@@ -14,3 +14,4 @@
 Route::get('/', 'landingController@index');
 
 Route::get('card/{print}/{number}','cardController@index')->name('viewCard');
+Route::get('debug', 'cardController@datacard')->name('debug');

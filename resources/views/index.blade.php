@@ -86,7 +86,7 @@
 		  <div class="col-md-10">
 		  	<div class="row">
 		  		<div class="col-md-6">
-		  			<iframe src="" width="100%" height="400"></iframe> 
+		  			<object data="{{ route('viewCard',['soi','123']) }}" width="100%" class="well"></object> 
 		  		</div>
 
 		  		<div class="col-md-6">
