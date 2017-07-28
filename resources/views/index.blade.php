@@ -86,7 +86,7 @@
 		  <div class="col-md-10">
 		  	<div class="row">
 		  		<div class="col-md-6">
-		  			<iframe src="{!! route('viewCard',['SOI', '3']) !!}" width="100%" height="400"></iframe> 
+		  			<iframe src="" width="100%" height="400"></iframe> 
 		  		</div>
 
 		  		<div class="col-md-6">

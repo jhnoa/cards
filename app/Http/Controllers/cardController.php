@@ -6,18 +6,12 @@ use Illuminate\Http\Request;
 
 class cardController extends Controller
 {
-    public function index()
+    //
+    public function index($print,$number)
     {
-    	return view('api.card');
-    }
-
-    public function FunctionName()
-    {
-    	
-    }
-
-    public function cardApi($print,$number)
-    {
-    	return view('api.card',['title' => $print, 'text' => $number]);
+    	return view('check.mtgcard',[
+    		'print'=>$print,
+    		'number' => $number
+    	]);
     }
 }

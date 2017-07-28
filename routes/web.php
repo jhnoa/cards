@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/','landingController@index');
-Route::get('cards/{print}/{number}', 'cardController@cardApi')->name('viewCard');
+Route::get('/', 'landingController@index');
+
+Route::get('card/{print}/{number}','cardController@index')->name('viewCard');
