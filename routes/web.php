@@ -15,3 +15,5 @@ Route::get('/', 'landingController@index');
 
 Route::get('card/{print}/{number}','cardController@index')->name('viewCard');
 Route::get('debug', 'cardController@datacard')->name('debug');
+Route::get('installation', 'cardController@install')->name('installJSON');
+Route::get('insert', 'cardController@insert')->name('insertJSON');

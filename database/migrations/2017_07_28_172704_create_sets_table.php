@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlaneswalkerCardsTable extends Migration
+class CreateSetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreatePlaneswalkerCardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('planeswalker_cards', function (Blueprint $table) {
+        Schema::create('sets', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('loyalty');
+            $table->string('name');
+            $table->string('code');
+            $table->date('release');
+            $table->string('type');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreatePlaneswalkerCardsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('planeswalker_cards');
+        Schema::dropIfExists('sets');
     }
 }

@@ -15,10 +15,11 @@ class CreateCardAdditionalsTable extends Migration
     {
         Schema::create('card_additionals', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('number');
-            $table->string('rarity');
-            $table->string('layout');
             $table->string('sets');
+            $table->string('setnumber');
+            $table->string('subtypes')->nullable()->default('');
+            $table->string('supertypes')->nullable()->default('');
+            $table->string('layout');
             $table->timestamps();
         });
     }

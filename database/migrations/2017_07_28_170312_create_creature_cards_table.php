@@ -15,8 +15,11 @@ class CreateCreatureCardsTable extends Migration
     {
         Schema::create('creature_cards', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('power');
-            $table->integer('toughness');
+            $table->string('sets');
+            $table->string('setnumber');
+            $table->string('power')->nullable()->default(0);
+            $table->string('toughness')->nullable()->default(0);
+            $table->string('loyalty')->nullable()->default(0);
             $table->timestamps();
         });
     }

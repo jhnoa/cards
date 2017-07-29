@@ -14,13 +14,30 @@ class CreateCardsTable extends Migration
     public function up()
     {
         Schema::create('cards', function (Blueprint $table) {
+            //
             $table->increments('id');
+            $table->string('sets');
+            $table->string('setnumber');
             $table->string('name');
-            $table->integer('cmc');
-            $table->string('manacost');
-            $table->string('text');
-            $table->string('flavor');
+            $table->string('cmc')->nullable()->default(0);
+            $table->string('manacost')->nullable()->default('');
+            $table->string('type');
+            $table->string('rarity');
+            /*
+             $table->string('subtypes')->nullable()->default('');
+            $table->string('supertypes')->nullable()->default('');
+            $table->string('layout');
+            //
+            $table->string('power')->nullable()->default(0);
+            $table->string('toughness')->nullable()->default(0);
+            $table->string('loyalty')->nullable()->default(0);
+            //
+            $table->longText('text')->nullable();
+            $table->longText('flavor')->nullable();
+            */
+
             $table->timestamps();
+
         });
     }
 

@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Card;
+use App\CardAdditional;
+use App\CreatureCard;
+use App\Description;
+use App\Set;
 
 class cardController extends Controller
 {
@@ -22,9 +27,12 @@ class cardController extends Controller
     //
     public function index($print,$number)
     {
-    	$url = 'http://magiccards.info/scans/en/'.$print.'/'.$number.'.jpg';
+    	$url = 'http://magiccards.info/scans/en/'.strtolower($print).'/'.$number.'.jpg';
+    	//$card['main'] = Card::
     	//return var_export($url);
-    	return '<img class="card-img-top" src="'. $url.'" alt="Card image cap" style="height: 500px">';
+    	return view('api.card',[
+    		'url' => $url,
+    		]);
     }
 
     public function datacard()
@@ -87,6 +95,78 @@ class cardController extends Controller
 			}
 		}
 		return '<pre>'.var_export($Column,true).'</pre>';
+    }
+    public function insert()
+    {
+    	$Column = array();
+		
+		$string = file_get_contents(asset('json/Sets.json'));
+		
+		$json_a = json_decode($string, true);
+		
+		$Contents = $this->object2array($json_a);
+		
+    	foreach($Contents as $Sets => $Keys)
+		{
+
+			$newSets = new Set;
+			$newSets->name = $Keys['name'];
+			$newSets->code = $Keys['code'];
+			$newSets->release = $Keys['releaseDate'];
+			$newSets->type = $Keys['type'];
+			$newSets->save();
+
+			foreach($Keys as $key => $values)
+			{
+				if($key == "cards")
+				{
+					foreach($values as $value => $val)
+					{	
+						$newCards = new Card;
+						$newCards->sets = $Keys['code'];
+						$newCards->setnumber = (string)$val['number'];
+						$newCards->name = $val['name'];
+						if(isset($val['cmc']))$newCards->cmc = $val['cmc'];
+						if(isset($val['manaCost']))$newCards->manacost = $val['manaCost'];
+						$newCards->type = json_encode($val['type']);
+						$newCards->rarity = $val['rarity'];
+						$newCards->save();
+
+						$newCards = new Description;
+						$newCards->sets = $Keys['code'];
+						$newCards->setnumber = (string)$val['number'];
+						if(isset($val['text']))$newCards->text = json_encode($val['text']);
+						if(isset($val['flavor']))$newCards->flavor = $val['flavor'];
+						$newCards->save();
+
+
+						$newCards = new CreatureCard;
+						$newCards->sets = $Keys['code'];
+						$newCards->setnumber = (string)$val['number'];
+						if(isset($val['power']))$newCards->power = $val['power'];
+						if(isset($val['toughness']))$newCards->toughness = $val['toughness'];
+						if(isset($val['loyalty']))$newCards->loyalty = $val['loyalty'];
+						$newCards->save();
+						
+
+						$newCards = new CardAdditional;
+						$newCards->sets = $Keys['code'];
+						$newCards->setnumber = (string)$val['number'];
+						if(isset($val['subtypes']))$newCards->subtypes = json_encode($val['subtypes']);
+						if(isset($val['supertypes']))$newCards->supertypes = json_encode($val['supertypes']);
+						$newCards->layout = $val['layout'];
+						$newCards->save();
+
+
+					}
+				}		
+			}
+		}
+
+
+
+		$result = '<pre>'.var_export($Column,true).'</pre>';
+		return $result;
     }
     
 }
