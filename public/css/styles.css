@@ -1,10 +1,16 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f7f7f7;
+  /*background-color: #f7f7f7;*/
   position: relative;
   margin: 0px;
   font-size: 12px;
   padding: 0px;
+  background-image: url("http://magic.wizards.com/sites/mtg/files/images/wallpaper/gOb8lvdMeM_HOU_1920x1080_Wallpaper.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .page-content > .row {
@@ -16,37 +22,41 @@ body {
 /* Footer */
 
 footer{
-   background-color:#2c3742;
+/*   background-color:#2c3742;
    box-shadow:inset 0px 0px 3px #111;
    color:#fff;
    font-size:14px;
    line-height:25px;
    padding:10px 0px 10px 0px;
-   bottom: 0px;
+   bottom: 0px;*/
+   background-color: black;
+   z-index: 100;
+   width: 100%;
+   color: white;
 }
 
 footer a{
    color:#eee;
    text-decoration:none;
-   border-bottom:1px dotted #888;
+/*   border-bottom:1px dotted #888;*/
 }
 
 footer a:hover{
    color:#aaa;
    text-decoration:none;
-   border:0px;
+ /*  border:0px;*/
 }
 
 footer hr{
-	margin-top: 10px;
+	/*margin-top: 10px;
 	margin-bottom: 10px;
 	border-top: #000 1px solid;
-	border-bottom: #212121 1px solid;
+	border-bottom: #212121 1px solid;*/
 }
 
 footer .copy{
    font-size:13px;
-   margin:15px 0px;
+/*   margin:15px 0px;*/
 }
 
 /* Logo & Navigation */
@@ -381,7 +391,7 @@ footer .copy{
 }
 
 body {
-  background-color: #eff0f3;
+  /*background-color: #eff0f3;*/
 }
 
 /** Login & Signup **/
@@ -649,4 +659,12 @@ body {
       box-shadow:0px 0px 1px #0fa6bc;
       border-radius:10px;
    }  
+}
+.parallax {
+  background-image: url("http://magic.wizards.com/sites/mtg/files/images/wallpaper/gOb8lvdMeM_HOU_1920x1080_Wallpaper.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
