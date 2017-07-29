@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace MTGDataBase\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

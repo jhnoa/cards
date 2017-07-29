@@ -64,6 +64,7 @@ class ComposerStaticInit3f060a8c219283d8ac3fc791e581f238
         'M' => 
         array (
             'Monolog\\' => 8,
+            'MTGDataBase\\' => 12,
         ),
         'L' => 
         array (
@@ -89,10 +90,6 @@ class ComposerStaticInit3f060a8c219283d8ac3fc791e581f238
         array (
             'Cron\\' => 5,
             'Carbon\\' => 7,
-        ),
-        'A' => 
-        array (
-            'App\\' => 4,
         ),
     );
 
@@ -191,6 +188,10 @@ class ComposerStaticInit3f060a8c219283d8ac3fc791e581f238
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'MTGDataBase\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
@@ -231,10 +232,6 @@ class ComposerStaticInit3f060a8c219283d8ac3fc791e581f238
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app',
-        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -270,42 +267,13 @@ class ComposerStaticInit3f060a8c219283d8ac3fc791e581f238
     );
 
     public static $classMap = array (
-        'App\\Card' => __DIR__ . '/../..' . '/app/Card.php',
-        'App\\CardAdditional' => __DIR__ . '/../..' . '/app/CardAdditional.php',
-        'App\\CardType' => __DIR__ . '/../..' . '/app/CardType.php',
-        'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\CreatureCard' => __DIR__ . '/../..' . '/app/CreatureCard.php',
-        'App\\Description' => __DIR__ . '/../..' . '/app/Description.php',
-        'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
-        'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
-        'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
-        'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
-        'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\cardController' => __DIR__ . '/../..' . '/app/Http/Controllers/cardController.php',
-        'App\\Http\\Controllers\\landingController' => __DIR__ . '/../..' . '/app/Http/Controllers/landingController.php',
-        'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
-        'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
-        'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
-        'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
-        'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\PlaneswalkerCard' => __DIR__ . '/../..' . '/app/PlaneswalkerCard.php',
-        'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
-        'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
-        'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
-        'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
-        'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\Set' => __DIR__ . '/../..' . '/app/Set.php',
-        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'CreateCardAdditionalsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_171803_create_card_additionals_table.php',
-        'CreateCardTypesTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_170543_create_card_types_table.php',
         'CreateCardsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_160150_create_cards_table.php',
         'CreateCreatureCardsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_170312_create_creature_cards_table.php',
         'CreateDescriptionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_29_031700_create_descriptions_table.php',
-        'CreatePlaneswalkerCardsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_171836_create_planeswalker_cards_table.php',
         'CreateSetsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_172704_create_sets_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
@@ -1574,6 +1542,33 @@ class ComposerStaticInit3f060a8c219283d8ac3fc791e581f238
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
+        'MTGDataBase\\Card' => __DIR__ . '/../..' . '/app/Card.php',
+        'MTGDataBase\\CardAdditional' => __DIR__ . '/../..' . '/app/CardAdditional.php',
+        'MTGDataBase\\CardType' => __DIR__ . '/../..' . '/app/CardType.php',
+        'MTGDataBase\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'MTGDataBase\\CreatureCard' => __DIR__ . '/../..' . '/app/CreatureCard.php',
+        'MTGDataBase\\Description' => __DIR__ . '/../..' . '/app/Description.php',
+        'MTGDataBase\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'MTGDataBase\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
+        'MTGDataBase\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
+        'MTGDataBase\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
+        'MTGDataBase\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+        'MTGDataBase\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'MTGDataBase\\Http\\Controllers\\cardController' => __DIR__ . '/../..' . '/app/Http/Controllers/cardController.php',
+        'MTGDataBase\\Http\\Controllers\\landingController' => __DIR__ . '/../..' . '/app/Http/Controllers/landingController.php',
+        'MTGDataBase\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'MTGDataBase\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
+        'MTGDataBase\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
+        'MTGDataBase\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
+        'MTGDataBase\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'MTGDataBase\\PlaneswalkerCard' => __DIR__ . '/../..' . '/app/PlaneswalkerCard.php',
+        'MTGDataBase\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'MTGDataBase\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
+        'MTGDataBase\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
+        'MTGDataBase\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'MTGDataBase\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'MTGDataBase\\Set' => __DIR__ . '/../..' . '/app/Set.php',
+        'MTGDataBase\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryTestCase' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryTestCase.php',

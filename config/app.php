@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        MTGDataBase\Providers\AppServiceProvider::class,
+        MTGDataBase\Providers\AuthServiceProvider::class,
+        // MTGDataBase\Providers\BroadcastServiceProvider::class,
+        MTGDataBase\Providers\EventServiceProvider::class,
+        MTGDataBase\Providers\RouteServiceProvider::class,
 
     ],
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace MTGDataBase\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Card;
-use App\CardAdditional;
-use App\CreatureCard;
-use App\Description;
-use App\Set;
+use MTGDataBase\Card;
+use MTGDataBase\CardAdditional;
+use MTGDataBase\CreatureCard;
+use MTGDataBase\Description;
+use MTGDataBase\Set;
 
 class cardController extends Controller
 {
