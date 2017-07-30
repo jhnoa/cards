@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'landingController@index');
+Route::get('/{print?}/{number?}', 'landingController@index')->name('index');
 
 Route::get('card/{print}/{number}','cardController@index')->name('viewCard');
 

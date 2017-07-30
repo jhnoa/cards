@@ -28,10 +28,15 @@ class cardController extends Controller
     public function index($print,$number)
     {
     	$url = 'http://magiccards.info/scans/en/'.strtolower($print).'/'.$number.'.jpg';
+    	$card = Card::where('sets',$print)->where('setnumber',$number)->get()->toarray();
+    	$desc = Description::where('sets',$print)->where('setnumber',$number)->get()->toarray();
+
     	//$card['title'] = Card::
     	//return var_export($url);
     	return view('api.card',[
     		'url' => $url,
+    		'card' => $card,
+    		'desc' => $desc,
     		]);
     }
 

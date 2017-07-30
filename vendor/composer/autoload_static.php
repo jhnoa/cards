@@ -270,6 +270,7 @@ class ComposerStaticInit3f060a8c219283d8ac3fc791e581f238
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'CreateCacheTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_29_124424_create_cache_table.php',
         'CreateCardAdditionalsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_171803_create_card_additionals_table.php',
         'CreateCardsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_160150_create_cards_table.php',
         'CreateCreatureCardsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_28_170312_create_creature_cards_table.php',

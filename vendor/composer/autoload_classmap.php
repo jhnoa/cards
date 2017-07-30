@@ -9,6 +9,7 @@ return array(
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
     'Carbon\\Exceptions\\InvalidDateException' => $vendorDir . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+    'CreateCacheTable' => $baseDir . '/database/migrations/2017_07_29_124424_create_cache_table.php',
     'CreateCardAdditionalsTable' => $baseDir . '/database/migrations/2017_07_28_171803_create_card_additionals_table.php',
     'CreateCardsTable' => $baseDir . '/database/migrations/2017_07_28_160150_create_cards_table.php',
     'CreateCreatureCardsTable' => $baseDir . '/database/migrations/2017_07_28_170312_create_creature_cards_table.php',
